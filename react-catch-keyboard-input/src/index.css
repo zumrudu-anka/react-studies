@@ -1,0 +1,24 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+}
+
+.App{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000d10;
+}
+
+.App p{
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.App p:nth-child(2){
+    margin-top: 25px;
+    color: #00dcff;
+}

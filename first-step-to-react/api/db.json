@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "Osman",
+      "surname": "Durdağasd",
+      "degree": "Prof. Dr.",
+      "id": 1
+    },
+    {
+      "name": "Murat",
+      "surname": "Öğretmen",
+      "degree": "Prof. Dr.",
+      "id": 3
+    }
+  ]
+}

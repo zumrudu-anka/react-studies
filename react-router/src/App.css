@@ -1,0 +1,13 @@
+.App{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav{
+  list-style-type: none;
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+
+}

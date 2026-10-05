@@ -1,0 +1,687 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/**
+*   Created By Osman DURDAG
+*/
+
+:root{
+    --woman-face-color: #6a216b;
+    --woman-face-hover-color: #8c35a7;
+    --man-face-color:#152730;
+    --man-face-hover-color: #3480a3;
+    --not-responded-face-color : #8a8485;
+    --not-responded-face-hover-color : #8a8485;
+    --under-review-face-color: #ffc800;
+    --under-review-face-hover-color: #ffc800;
+    --success-face-color : #297335;
+    --success-face-hover-color : #297335;
+    --on-assesment-face-color : #4792bd;
+    --on-assesment-face-hover-color : #4792bd;
+    --denied-face-color : #9e0120;
+    --denied-face-hover-color : #9e0120;
+}
+
+.page.active{
+    width: 100%;
+    height: 100vh;
+    user-select: none;
+    pointer-events: none;
+    filter: blur(20px);
+    transition: 0.5s;
+}
+
+/*#region Navbar*/
+
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+nav .logo{
+    margin-left: 10px;
+}
+
+nav .ProfessionSelect{
+    width: 0px;
+    position: relative;
+    left: 50px;
+}
+
+nav .ProfessionSelect select{
+    height: 35px;
+    border-radius: 10px;
+    /* -moz-appearance:none; Firefox */
+    /* -webkit-appearance:none; Safari and Chrome */
+    /* appearance:none; */
+}
+
+
+nav .lang-select{
+    position: relative;
+    right: 50px;
+}
+
+nav .lang-select .selected-language{
+    width: 35px;
+    cursor: pointer;
+}
+
+nav .lang-select .language-list{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+nav .lang-select .language-list img{
+    width: 35px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+nav .lang-select .language-list img.trLang{
+    animation: language-animate-tr 0.2s linear forwards;
+}
+
+@keyframes language-animate-tr{
+    from{
+        top: 0px;
+        right: 0px;
+    }
+    to{
+        top: -20px;
+        right: 50px;
+    }
+}
+
+nav .lang-select .language-list img.enLang{
+    animation: language-animate-en 0.2s linear forwards;
+}
+
+@keyframes language-animate-en{
+    from{
+        top: 0px;
+        right: 0px;
+    }
+    to{
+        top: 20px;
+        right: 50px;;
+    }
+}
+
+/*#endregion Navbar*/
+
+/*#region Main*/
+
+main{
+    position: relative;
+    top: 10vh;
+    height: 65vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background: #fff0de;
+}
+
+main button{
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 40px;
+    height: 40px;
+}
+
+main button:disabled{
+    background: gray;
+}
+
+main button:disabled:hover,
+main button:disabled:hover .arrow
+{
+    cursor: not-allowed;
+}
+
+main .arrow{
+    width: 20px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+main .cardArea{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+}
+
+main .card{
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+
+main .card .face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+main .card .face.face1{
+    background: var(--face-color);
+    z-index: 1;
+    transform-origin: bottom;
+    transition: 1s;
+}
+
+main .card .face.face1 img{
+    max-width: 100px;
+}
+
+main .card .face.face1 h2{
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+main .card .face.face1 h4{
+    margin: 5px 10px;
+    text-align: center;
+}
+
+main .card .face.face1 h4:nth-child(6){
+    font-size: 0.7em;
+}
+
+main .card .face.face1 h5{
+    margin: 10px;
+    text-align: center;
+}
+
+main .card:hover .face.face1{
+    transform: translateY(-100%) rotateX(90deg);
+    background: var(--face-hover-color);
+}
+
+main .card .face.face2{
+    background: var(--face-hover-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+    transition: 1s;
+    box-sizing: border-box;
+}
+
+main .card .face.face1 .content,
+main .card .face.face2 .content
+{
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+main .card .face.face2 .content{
+    position: relative;
+    top: -15px;
+}
+
+main .card .face.face2 .content span{
+    position: relative;
+    top: -10px;
+}
+
+main .card .face.face2 .content h2 span{
+    position: relative;
+    top: -5px;
+}
+
+main .card .face.face2 .content a{
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+
+main .card .face.face2 .content img{
+    width: 30px;
+}
+
+
+main .card:hover .face.face2{
+    transform: translateY(0) rotateX(0);
+}
+
+.content h2{
+    text-align: center;
+    margin: 1px;
+}
+
+.content .skills{
+    position: relative;
+    display: flex;
+    margin: 5px 0;
+    padding: 12px 10px 9px;
+    background: linear-gradient(#616161 0%,#333 10%, #222); 
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #000;
+    transition: 0.5s;
+}
+
+.content:hover .skills{
+    opacity: 0.1;
+}
+
+.content .skills:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.content .skills::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, .1);
+    z-index: 10;
+}
+
+.content .skills .Name{
+    position: relative;
+    width: 150px;
+    text-align: left;
+    color: #fff;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+
+.content .skills .Value{
+    position: relative;
+    width: 40px;
+    text-align: left;
+    color: #fff;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+
+.content .skills .percent{
+    position: relative;
+    width: 160px;
+    height: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background: #151515;
+    box-shadow: inset 0 0 10px #000;
+    overflow: hidden;
+}
+
+.content .skills .percent .progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: inset 0 0 2px #000;
+    animation: animate 4s ease-in-out forwards;
+}
+
+@keyframes animate{
+    0%{
+        width: 0;
+        /* background-color: darkred; */
+    }
+}
+
+.content .skills:nth-child(2) .percent .progress{
+    background: linear-gradient(45deg, #1fe6ff,#673AB7); 
+}
+
+.content .skills:nth-child(3) .percent .progress{
+    background: linear-gradient(45deg, #3bc0ff,#33ff00); 
+}
+
+.content .skills:nth-child(4) .percent .progress{
+    background: linear-gradient(45deg, #ffee54,#ff00ca); 
+}
+
+.content .skills:nth-child(5) .percent .progress{
+    background: linear-gradient(45deg, #22ffde,#2196f3); 
+}
+
+.content .skills:nth-child(6) .percent .progress{
+    background: linear-gradient(45deg, #1fe6ff,#673AB7); 
+}
+
+
+/*#endregion Main*/
+
+/*#region Footer*/
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 25vh;
+    width: 100vw;
+    background-color: #253943;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 353px;
+    z-index: 100;
+}
+
+footer .logo{
+    margin-right: 150px;
+}
+
+footer .logo img{
+    max-width: 100%;
+    width: 372px;
+    height: 75px;
+}
+
+footer .address{
+    color: white;
+}
+
+footer .contact{
+    color: white;
+    margin-left: 150px;
+}
+
+/*#endregion Footer*/
+
+/*#region Modal*/
+
+.modal{
+    position : absolute;
+    top : 20vh;
+    left : 20%;
+    display : none;
+    opacity: 0;
+    width : 60%;
+    height : 50vh;
+    background-color : black;
+    z-index : 100000;
+}
+
+.modal.active{
+    display : block;
+    animation: modalAnimate 0.5s linear forwards;
+}
+
+@keyframes modalAnimate {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.modal.active .closeButton{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    background: black;
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.modal.active .modalContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal.active .modalContent .leftArrow,
+.modal.active .modalContent .rightArrow{
+    font-size: 4em;
+    cursor: pointer;
+}
+
+.modal.active .modalContent .leftArrow{
+    margin-left: 15px;
+}
+
+.modal.active .modalContent .rightArrow{
+    margin-right: 15px;
+}
+
+.modal.active .modalContent .modalCenter{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active .modalContent .modalCenter img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*#endregion Modal*/
+
+
+@media (max-width : 1390px){
+    main{
+        overflow: overlay;
+    }
+    
+    main button:nth-child(1){
+        position: fixed;
+        left: 30px;
+    }
+    main button:nth-child(3){
+        position: fixed;
+        right: 30px;
+    }
+    
+    main .cardArea {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80vw;
+        flex-direction: column;
+    }
+    
+    main .card{
+        position: relative;
+        width: 400px;
+        height: 300px;
+        margin: 30px 0;
+    }
+}
+
+@media (max-width:990px){
+    footer .logo{
+        margin-right: 50px;
+    }
+
+    footer .contact{
+        margin-left: 50px;
+    }
+}
+
+@media (max-width:770px){
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    nav .ProfessionSelect{
+        left: 5px;
+    }
+
+    nav .lang-select {
+        right: 5px;
+    }
+
+    main .card {
+        width: 250px;
+    }
+
+    main .card .face.face1 h2 {
+        font-size: 1.3em;
+    }
+
+    main .card .face.face1 h4 {
+        font-size: 0.8em;
+    }
+
+    main .card .face.face1 h4:nth-child(6) {
+        font-size: 0.6em;
+    }
+
+    .content h2{
+        font-size: 1.3em;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .content .skills .Name {
+        width: 190px;
+        font-size: 0.6em;
+    }
+
+    .content .skills .Value {
+        width: 10px;
+        font-size: 0.6em;
+    }
+
+    .content .skills .percent {
+        width: 175px;
+        height: 15px;
+    }
+
+    footer .logo img{
+        width: 200px;
+    }
+
+    footer .address{
+        font-size: 12px;
+    }
+
+    footer .contact{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px){
+    
+    nav .logo a img{
+        width: 125px;
+    }
+
+    nav .ProfessionSelect select {
+        height: 25px;
+    }
+
+    nav .lang-select .selected-language {
+        width: 25px;
+        cursor: pointer;
+    }
+
+    nav .lang-select .language-list img{
+        width: 25px;
+    }
+
+    main .card {
+        width: 200px;
+    }
+
+    main .card .face.face1 h2 {
+        font-size: 1em;
+    }
+
+    main .card .face.face1 h4 {
+        font-size: 0.6em;
+    }
+    
+    main button {
+        width: 20px;
+        height: 20px;
+    }
+
+    main .arrow {
+        width: 10px;
+    }
+
+    main button:nth-child(1){
+        position: fixed;
+        left: 10px;
+    }
+    main button:nth-child(3){
+        position: fixed;
+        right: 10px;
+    }
+
+    .content h2 {
+        font-size: 1em;
+    }
+
+    .content .skills .Name {
+        white-space: nowrap;
+        min-width: 20%;
+        width: 20%;
+        font-size: 0.5em;
+    }
+}
+
+@media (max-height:500px){
+    nav .logo a img{
+        height: 25px;
+    }
+
+    footer{
+        font-size: 0.7em;
+    }
+
+    footer .logo img{
+        height: 50px;
+    }
+}

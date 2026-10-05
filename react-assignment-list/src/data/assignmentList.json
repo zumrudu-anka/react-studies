@@ -1,0 +1,399 @@
+{
+    "android" : [
+        {
+            "id" : 1,
+            "name" : "A",
+            "surname" : "A",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "female",
+            "begin_date" : "22.03.2021",
+            "begin_time" : "18:15",
+            "end_date" : "01.04.2021",
+            "end_time" : "18:15",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Kabul Edilmedi"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Denied"
+            },
+            "skills":{
+                "cpp" : "30%",
+                "android" : "0%",
+                "communication" : "90%",
+                "teamwork" : "0%",
+                "experience" : "10%"
+            }
+        },
+        {
+            "id" : 2,
+            "name" : "B",
+            "surname" : "B",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "22.03.2021",
+            "begin_time" : "18:15",
+            "end_date" : "01.04.2021",
+            "end_time" : "18:15",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Başarılı"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Success"
+            },
+            "skills":{
+                "cpp" : "80%",
+                "android" : "90%",
+                "communication" : "90%",
+                "teamwork" : "90%",
+                "experience" : "90%"
+            }
+        },
+        {
+            "id" : 3,
+            "name" : "C",
+            "surname" : "C",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "23.03.2021",
+            "begin_time" : "11:45",
+            "end_date" : "02.04.2021",
+            "end_time" : "11:45",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Cevap Verilmedi"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Not Responded"
+            },
+            "skills":{
+                "cpp" : "0%",
+                "android" : "0%",
+                "communication" : "75%",
+                "teamwork" : "0%",
+                "experience" : "25%"
+            }
+        },
+        {
+            "id" : 4,
+            "name" : "D",
+            "surname" : "D",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "04.05.2021",
+            "begin_time" : "16:00",
+            "end_date" : "16.05.2021",
+            "end_time" : "16:00",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "İnceleniyor"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Under Review"
+            },
+            "skills":{
+                "react" : "35%",
+                "design" : "30%",
+                "communication" : "85%",
+                "teamwork" : "0%",
+                "experience" : "15%"
+            }
+        },
+        {
+            "id" : 5,
+            "name" : "E",
+            "surname" : "E",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "28.05.2021",
+            "begin_time" : "21:00",
+            "end_date" : "04.06.2021",
+            "end_time" : "21:00",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Devam Ediyor"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Continues"
+            },
+            "skills":{
+                "react" : "0%",
+                "design" : "0%",
+                "communication" : "70%",
+                "teamwork" : "0%",
+                "experience" : "40%"
+            }
+        }
+    ],
+    "web" : [
+        {
+            "id" : 1,
+            "name" : "A",
+            "surname" : "A",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "female",
+            "begin_date" : "22.03.2021",
+            "begin_time" : "18:15",
+            "end_date" : "01.04.2021",
+            "end_time" : "18:15",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Kabul Edilmedi"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Denied"
+            },
+            "skills":{
+                "cpp" : "30%",
+                "android" : "0%",
+                "communication" : "90%",
+                "teamwork" : "0%",
+                "experience" : "10%"
+            }
+        },
+        {
+            "id" : 2,
+            "name" : "B",
+            "surname" : "B",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "22.03.2021",
+            "begin_time" : "18:15",
+            "end_date" : "01.04.2021",
+            "end_time" : "18:15",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Başarılı"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Success"
+            },
+            "skills":{
+                "cpp" : "80%",
+                "android" : "90%",
+                "communication" : "90%",
+                "teamwork" : "90%",
+                "experience" : "90%"
+            }
+        },
+        {
+            "id" : 3,
+            "name" : "C",
+            "surname" : "C",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "23.03.2021",
+            "begin_time" : "11:45",
+            "end_date" : "02.04.2021",
+            "end_time" : "11:45",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Cevap Verilmedi"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Not Responded"
+            },
+            "skills":{
+                "cpp" : "0%",
+                "android" : "0%",
+                "communication" : "75%",
+                "teamwork" : "0%",
+                "experience" : "25%"
+            }
+        },
+        {
+            "id" : 4,
+            "name" : "D",
+            "surname" : "D",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "04.05.2021",
+            "begin_time" : "16:00",
+            "end_date" : "16.05.2021",
+            "end_time" : "16:00",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "İnceleniyor"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Under Review"
+            },
+            "skills":{
+                "react" : "35%",
+                "design" : "30%",
+                "communication" : "85%",
+                "teamwork" : "0%",
+                "experience" : "15%"
+            }
+        },
+        {
+            "id" : 5,
+            "name" : "E",
+            "surname" : "E",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "28.05.2021",
+            "begin_time" : "21:00",
+            "end_date" : "04.06.2021",
+            "end_time" : "21:00",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Devam Ediyor"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Continues"
+            },
+            "skills":{
+                "react" : "0%",
+                "design" : "0%",
+                "communication" : "70%",
+                "teamwork" : "0%",
+                "experience" : "40%"
+            }
+        }
+    ],
+    "graphic" : [
+        {
+            "id" : 1,
+            "name" : "A",
+            "surname" : "A",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "female",
+            "begin_date" : "22.03.2021",
+            "begin_time" : "18:15",
+            "end_date" : "01.04.2021",
+            "end_time" : "18:15",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Kabul Edilmedi"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Denied"
+            },
+            "skills":{
+                "cpp" : "30%",
+                "android" : "0%",
+                "communication" : "90%",
+                "teamwork" : "0%",
+                "experience" : "10%"
+            }
+        },
+        {
+            "id" : 2,
+            "name" : "B",
+            "surname" : "B",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "22.03.2021",
+            "begin_time" : "18:15",
+            "end_date" : "01.04.2021",
+            "end_time" : "18:15",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Başarılı"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Success"
+            },
+            "skills":{
+                "cpp" : "80%",
+                "android" : "90%",
+                "communication" : "90%",
+                "teamwork" : "90%",
+                "experience" : "90%"
+            }
+        },
+        {
+            "id" : 3,
+            "name" : "C",
+            "surname" : "C",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "23.03.2021",
+            "begin_time" : "11:45",
+            "end_date" : "02.04.2021",
+            "end_time" : "11:45",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Cevap Verilmedi"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Not Responded"
+            },
+            "skills":{
+                "cpp" : "0%",
+                "android" : "0%",
+                "communication" : "75%",
+                "teamwork" : "0%",
+                "experience" : "25%"
+            }
+        },
+        {
+            "id" : 4,
+            "name" : "D",
+            "surname" : "D",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "04.05.2021",
+            "begin_time" : "16:00",
+            "end_date" : "16.05.2021",
+            "end_time" : "16:00",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "İnceleniyor"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Under Review"
+            },
+            "skills":{
+                "react" : "35%",
+                "design" : "30%",
+                "communication" : "85%",
+                "teamwork" : "0%",
+                "experience" : "15%"
+            }
+        },
+        {
+            "id" : 5,
+            "name" : "E",
+            "surname" : "E",
+            "phone" : "+90 (000) 000 00 00",
+            "gender" : "male",
+            "begin_date" : "28.05.2021",
+            "begin_time" : "21:00",
+            "end_date" : "04.06.2021",
+            "end_time" : "21:00",
+            "trContent" : {
+                "comment" : "Örnek yorum",
+                "status" : "Devam Ediyor"
+            },
+            "enContent" : {
+                "comment" : "Example Comment",
+                "status" : "Continues"
+            },
+            "skills":{
+                "react" : "0%",
+                "design" : "0%",
+                "communication" : "70%",
+                "teamwork" : "0%",
+                "experience" : "40%"
+            }
+        }
+    ]
+}
+

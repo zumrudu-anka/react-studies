@@ -1,0 +1,22 @@
+.wrapper {
+    margin: 20px auto;
+    max-height: 425px;
+    min-height: 120px;
+    overflow-x: hidden;
+    padding-right: 10px;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  .wrapper::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .wrapper::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  .wrapper::-webkit-scrollbar-thumb {
+    background: var(--primaryText);
+    border-radius: 10px;
+  }
+  

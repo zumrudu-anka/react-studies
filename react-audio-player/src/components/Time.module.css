@@ -1,0 +1,12 @@
+.time {
+    font-family: 'Varela Round', sans-serif;
+    color: var(--timeColor);
+    text-align: right;
+    font-size: 30px;
+  }
+  @media only screen and (max-width: 600px) {
+    .time {
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,11 @@
+.title {
+    color: var(--titleColor);
+    font-size: 28px;
+  }
+  @media only screen and (max-width: 600px) {
+    .title {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    height: 5vh;
+    width: 100%;
+    background-color: #008c9e;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+        a{
+            text-decoration: none;
+            li{
+                color: white;
+                margin-right: 15px;
+                font-weight: bold;
+                cursor: pointer;
+               
+            }
+        }
+        
+    }
+}
+
+.pageContent{
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    .homePage{
+        h1{
+            color: white;
+        }
+    }
+
+    .useEffectPage{
+        color: white;
+    }
+
+    .aboutPage{
+        color: white;
+        text-align: center;
+    }
+    .membersPage{
+        color: white;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 90%;
+        hr{
+            width: 90%;
+        }
+        table{
+            background-color: white;
+            color: black;
+            width: 85%;
+            height: 75%;
+            text-align: center;
+            line-height: 1.5em;
+            thead{
+                background-color: #008c9e;
+                color: white;
+            }
+            tbody{
+                tr{
+                    td:nth-child(1){
+                        background-color: #008c9e;
+                        a{
+                            text-decoration: none;
+                            font-weight: bold;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .profilePage{
+        height: 100%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1, h2, h4{
+            margin-bottom: 15px;
+        }
+    }
+
+    .bookListPage{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            margin-bottom: 50px;
+        }
+        .book{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h2{
+                margin-top: 25px;
+            }
+        }
+    }
+
+    .addBookForm{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 50%;
+        height: 25%;
+        background-color: #008c9e;
+        border-radius: 15px;
+        position: relative;
+        bottom: 100px;
+        legend{
+            color: white;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        input{
+            font-size: 1.3em;
+            border-radius: 5px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            &::placeholder{
+                color: white;
+            }
+        }
+
+        button{
+            background-color: black;
+            color: white;
+            width: 40%;
+            font-size: 1.1em;
+            padding: 5px;
+
+        }
+    }
+}

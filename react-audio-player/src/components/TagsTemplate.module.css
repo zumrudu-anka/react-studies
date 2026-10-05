@@ -1,0 +1,8 @@
+.wrapper {
+    width: 100%;
+    margin: 20px auto;
+    height: auto;
+    color: var(--primaryText);
+    display: inline-block;
+    text-align: center;
+  }
