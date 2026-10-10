@@ -1,0 +1,34 @@
+{
+    "en_title": "En Title",
+    "tr_title": "Tr Title",
+    "abstract": "Abstract",
+    "abstract_sum" : "Abstract Summary",
+    "rqs": [
+        "Research Question 1",
+        "Research Question 2",
+        "Research Question 3"
+    ],
+    "problems" : [
+        "Problem 1",
+        "Problem 2",
+        "Problem 3"
+    ],
+    "method" : [
+        "Method 1",
+        "Method 2",
+        "Method 3",
+        "Method 4",
+        "Method 5"
+    ],
+    "results" : [
+        "Result 1",
+        "Result 2",
+        "Result 3",
+        "Result 4"
+    ],
+    "suggestions" : [
+        "Suggestion 1",
+        "Suggestion 2",
+        "Suggestion 3"
+    ]
+}
