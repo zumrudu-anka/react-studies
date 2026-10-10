@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #202833;
+    padding: 0;
+    box-sizing: border-box;
+
+    .App{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        max-height: 100vh;
+
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5vh;
+            background-color: #66FCF1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-direction: row;
+                li{
+                    list-style: none;
+                    cursor: pointer;
+                    margin-right: 20px;
+                    font-weight: bold;
+                    a{
+                        text-decoration: none;
+                        color: #202833;
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        header{
+            height: 10vh;
+            h1{
+                color: #66FCF1;
+                font-size: 3vw;
+                @media screen and (max-width : 997px) {
+                    font-size: 4vw;
+                }
+            }
+            span#info{
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                width: 50px;
+                height: 5vh;
+                background-color: #950000;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                cursor: pointer;
+                border-bottom-right-radius: 10px;
+                
+
+                &::after{
+                    content: "This is Only Works on Mobile Devices";
+                    position: absolute;
+                    top: 6vh;
+                    left: 0;
+                    cursor: auto;
+                    display: none;
+                    width: 50px;
+                    height: 100vh;
+                    font-size: 16px;
+                    color: #a50e0e;
+                    font-weight: bold;
+                    writing-mode: vertical-lr;
+                    text-orientation: upright;
+                    @media screen and (max-width : 750px) {
+                        font-size: 2.5vw;
+                    }
+                }
+                &:hover{
+                    &::after{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                    }
+                }
+            }
+
+        }
+
+        #barcode-scanner-canvas{
+            width: 60vw;
+            height: 34vh;
+            background: linear-gradient(to right, white, black);
+            border-radius: 10px;
+
+            @media screen and (max-width:997px){
+                width: 75vw;
+            }
+        }
+
+        #open-cam-button{
+            height: 50px;
+            width: 30vw;
+            border-radius: 10px;
+            background-color: #66FCF1;
+            color: #202833;
+            font-size: 1.5vw;
+            font-weight: bold;
+            cursor: pointer;
+
+            @media screen and (max-width:750px){
+                width: 50vw;
+                font-size: 3vw;
+            }
+        }
+
+        #product-area{
+            width: 75vw;
+            height: 21vh;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                width: 15vw;
+                height: 21vh;
+            }
+
+            .info{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: white;
+                width: 55vw;
+                
+                .feature-area{
+                    height: 7vh;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-bottom: 1px solid #202833;
+
+                    .title{
+                        width: 100px;
+                        height: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin-left: 15px;
+                        border-right: 1px solid #202833;
+                    }
+
+                    .value{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        width: 80%;
+                        height: 100%;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+
+        #product-list{
+            height: 95vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            table{
+                position: absolute;
+                top: 10vh;
+                color: white;
+                width: 80vw;
+                th, td{
+                    height: 25px;
+                }
+                z-index : -100
+            }
+        }
+
+        #add-product{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            width: 80vw;
+            height: 70vh;
+            background-color: #45A29F;
+            color: #202833;
+            font-weight: bold;
+            font-size: 3vw;
+            border-radius: 10px;
+            @media screen and (max-width:750px) {
+                font-size: 4vw;
+            }
+            input{
+                width: 50%;
+                height: 50px;
+                border-radius: 10px;
+                border: 3px solid #202833;
+                text-align: center;
+                color: #202833;
+                font-size: 2vw;
+                @media screen and (max-width:750px) {
+                    font-size: 3vw;
+                }
+
+                &#file-input{
+                    display: none;
+                }
+            }
+
+            button{
+                height: 50px;
+                width: 50%;
+                background-color: #202833;
+                color: white;
+                font-weight: bold;
+                font-size: 2vw;
+                border-radius: 10px;
+                cursor: pointer;
+                @media screen and (max-width:750px) {
+                    font-size: 3vw;
+                }
+
+                &#select-image-button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+  
