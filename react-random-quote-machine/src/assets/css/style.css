@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --current-color: #333;
+}
+
+#root {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    background-color: var(--current-color);
+    color: var(--current-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+#quote-box{
+    width: 450px;
+    border-radius: 3px;
+    position: relative;
+    padding: 40px 50px;
+    background-color: #fff;
+}
+
+#quote-box #text{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.75em;
+}
+
+#quote-box #text svg{
+    margin-right: 0.4em;
+    font-size: 1em;
+}
+
+#quote-box #author{
+    padding-top: 20px;
+    font-size: 1em;
+    text-align: right;
+}
+
+#quote-box .quote-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#quote-box .quote-buttons .button{
+    border-radius: 3px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--current-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: 0.85em;
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+    transition: background-color 1s;
+}
+
+#quote-box .quote-buttons .button svg{
+    font-size: 1.2em;
+}

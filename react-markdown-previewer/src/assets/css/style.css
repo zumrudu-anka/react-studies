@@ -1,0 +1,125 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--editor-max-width: 600px;
+	--bg-color: #094f83;
+}
+
+#root {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 20px;
+	padding: 40px;
+}
+
+#editorBox,
+#previewBox {
+	max-width: var(--editor-max-width);
+	width: 90vw;
+}
+
+#editorBox h1.title,
+#previewBox h1.title {
+	text-align: left;
+	background-color: var(--bg-color);
+	display: flex;
+	align-items: center;
+	padding: 4px 12px;
+	border-radius: 4px 4px 0px 0px;
+	color: #fff;
+	margin: 0;
+}
+
+#editorBox h1 svg,
+#previewBox h1 svg {
+	margin-right: 0.4em;
+}
+
+#editorBox #editor {
+	width: 100%;
+	outline: none;
+	border: 1px solid var(--bg-color);
+	box-shadow: 1px 1px 15px 3px var(--bg-color);
+	border-top: none;
+	padding: 8px;
+	font-size: 0.875rem;
+	min-height: 200px;
+	resize: vertical;
+	border-radius: 0px 0px 4px 4px;
+}
+
+#previewBox {
+	min-height: 200px;
+}
+
+#previewBox #preview {
+	width: 100%;
+	padding: 1rem 1.5rem;
+	border: 1px solid var(--bg-color);
+	border-radius: 0px 0px 4px 4px;
+}
+
+#previewBox #preview h1,
+#previewBox #preview h2,
+#previewBox #preview h3,
+#previewBox #preview h4,
+#previewBox #preview h5,
+#previewBox #preview h6,
+#previewBox #preview p strong,
+#previewBox #preview a
+{
+	color: var(--bg-color);
+}
+
+#previewBox #preview a:hover{
+	text-shadow: 0 0 5px var(--bg-color);
+}
+
+#previewBox #preview blockquote{
+	border-left: 3px solid var(--bg-color);
+	color: var(--bg-color);
+	padding-left: 4px;
+	margin-left: 24px;
+}
+
+#previewBox #preview h1 {
+	border-bottom: 2px solid var(--bg-color);
+}
+#previewBox #preview h2 {
+	border-bottom: 1px solid var(--bg-color);
+}
+
+#previewBox #preview p code{
+	background-color: var(--bg-color);
+	color: #fff;
+	font-style: italic;
+	border-radius: 4px;
+}
+
+#previewBox #preview table{
+	border-collapse: collapse;
+}
+
+#previewBox #preview table th{
+	color: var(--bg-color);
+}
+
+#previewBox #preview table th,
+#previewBox #preview table td {
+	border: 2px solid var(--bg-color);
+	padding: 0 4px;
+}
+
+#previewBox #preview li::marker{
+	color: var(--bg-color);
+}
+
+#previewBox #preview img {
+	max-width: calc(600px - 3rem);
+}
