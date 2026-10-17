@@ -1,0 +1,1 @@
+let myAngular = angular.module("myAngular",[]);

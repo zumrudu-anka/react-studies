@@ -1,0 +1,139 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-animate.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body ng-app="myApp" >
+
+    <!-- <div ng-controller="div1controller">
+        <input type="text" ng-model="isim2"><br><br>
+        <div ng-if="isim2 == 'Osman'">
+                Arkaplan Seçimi: <select ng-model="chooseStyle">
+                <option>Siyah</option>
+                <option>Gri</option>
+            </select>
+            <p ng-style="chooseStyle == 'Siyah' ? siyahStyle : (chooseStyle =='Gri' ? griStyle : '')" ng-bind="isim2"></p>
+        </div>
+    </div>
+    <div ng-controller="div2controller">
+        <input type="checkbox" ng-model="arkaplan">
+        <div>
+            <p ng-class="arkaplan ? 'arkaplan1' : 'arkaplan2'">qwdqwdqwdqwd</p>
+        </div>
+    </div> -->
+    <!-- <section ng-controller="MySelectController">
+        <select name="" ng-model="trySelect" ng-options="x as y.name for (x, y) in myoptions" id="">
+        </select>
+        {{trySelect}}
+    </section> -->
+
+    <!-- <section ng-controller="LearningEvents">
+        <div style="background-color: cadetblue" ng-mousemove="count = count + 1">
+            <h1>Mouse Move
+            </h1><br>
+            <h4>yeniyeni</h4>
+        </div>
+        <h4 style="text-align: center; padding-left:45%">{{count}}</h4>
+
+        <div style="margin-top:50px; background-color: darkslategrey; text-align: center">
+            <input type="text" name="asd" ng-keydown="myBlur('keydown')">
+            <input type="text" name="asd3" ng-keyup="myBlur('keyup')">
+            <input type="text" name="asd2" ng-keypress="myBlur('keypress')">
+        </div>
+    </section> -->
+
+    <!-- <section ng-controller="SwitchCases">
+        <div>
+            <input type="radio" value="item11" ng-model="myradio">HTML
+            <input type="radio" value="item12" ng-model="myradio">CSS
+            <input type="radio" value="item13" ng-model="myradio">JS
+            <input type="radio" value="item14" ng-model="myradio">JQuery
+            <input type="radio" value="item15" ng-model="myradio">AngularJS    
+        </div>
+        <div>
+            <select ng-model="mySelect" ng-options="x as x for (x , y) in { name : 'Osman', age : 15}">
+            </select>
+        </div>
+        <div ng-switch="myradio">
+            <div ng-switch-when="item11">
+                <h1>HTML</h1>
+                <hr>
+            </div>
+            <div ng-switch-when="item12">
+                <h1>CSS</h1>
+                <hr>
+            </div>
+            <div ng-switch-when="item13">
+                <h1>JS</h1>
+                <hr>
+            </div>
+            <div ng-switch-when="item14">
+                <h1>JQuery</h1>
+                <hr>
+            </div>
+            <div ng-switch-when="item15">
+                <h1>AngularJS</h1>
+                <hr>
+            </div>       
+        </div>
+        <hr>
+        <div ng-switch="mySelect">
+            <div ng-switch-when="15">
+                <h1>Ali</h1>
+                <hr>
+            </div>
+            <div ng-switch-when="Ayşe">
+                <h1>Ayşe</h1>
+                <hr>
+            </div>
+            <div ng-switch-when="Mehmet">
+                <h1>Mehmet</h1>
+                <hr>
+            </div>
+            <div ng-switch-when="Hatice">
+                <h1>Hatice</h1>
+                <hr>
+            </div>
+        </div>
+    </section> -->
+<!-- 
+    <div ng-include = "'yeni.html'">
+
+    </div> -->
+    <style>
+        .myClass{
+            background-color: darkcyan;
+            width: 50%;
+            height: 150px;
+        }
+        .div-show{
+            transition: all linear 2s;
+            left:10px;
+        }
+        .div-show.ng-hide{
+            opacity: 0;
+            height: 0;
+            left:50px;
+            width: 0%
+        }
+    </style>
+    <!-- <section ng-controller="animateController">
+            <input type="checkBox" ng-model="mycheck">
+
+            <div class="myClass div-show" ng-hide="mycheck">
+        
+            </div>
+    </section> -->
+    <section ng-controller="DirectiveCont">
+        <new-directive name = "'yeni'" clickfunc='myClick()'></new-directive>
+    </section>
+    
+    <script src="custom.js"></script>
+</body>
+</html>

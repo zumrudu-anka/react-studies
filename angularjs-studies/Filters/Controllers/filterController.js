@@ -1,0 +1,50 @@
+myAngular.controller('filterController',($scope)=>{
+    $scope.orderParam = 'name';
+    $scope.persons = [
+        {
+            name:"Osman",
+            surname:"Anka",
+            age:29,
+            language:"JavaScript"
+        },
+        {
+            name:"Murat",
+            surname:"Zumrud",
+            age:15,
+            language:"Html"
+        },
+        {
+            name:"Ahmet",
+            surname:"Beser",
+            age:38,
+            language:"CSS"
+        },
+        {
+            name:"Mehmet",
+            surname:"Sasar",
+            age:11,
+            language:"C#"
+        },
+        {
+            name:"Fatih",
+            surname:"Uzun",
+            age:24,
+            language:"Python"
+        },
+        {
+            name:"Ali",
+            surname:"Kısa",
+            age:21,
+            language:"Unity"
+        },
+        {
+            name:"Veli",
+            surname:"Kararında",
+            age:53,
+            language:"C++"
+        }
+    ];
+    $scope.chooseOrder = function(param){
+        $scope.orderParam = param;
+    }
+});

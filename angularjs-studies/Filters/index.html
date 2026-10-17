@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="./App/app.js"></script>
+    <script src="./Controllers/filterController.js"></script>
+    <script src="./myFilters/myFilters.js"></script>
+    <title>Document</title>
+    <style>
+        input::placeholder{
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body ng-app="myAngular">
+    <div ng-controller="filterController">
+        <input type="text" ng-model="searchText" style="border:3px solid rgb(2, 36, 36); border-radius: 5px; margin: auto; display: block; height: 25px; margin-top:50px" placeholder="Search...">
+        <table border="1px solid black" style="border-collapse: collapse;width: 50%; text-align: center; margin: auto; margin-top: 1%;">
+            <tr>
+                <th ng-click="chooseOrder('name')">Name</th>
+                <th ng-click="chooseOrder('surname')">Surname</th>
+                <th ng-click="chooseOrder('age')">Age</th>
+                <th ng-click="chooseOrder('language')">Language</th>
+            </tr>
+            <tr ng-style="$odd ? {'background-color':'gray'} : {'background-color':'#6b5555'}" ng-repeat="person in persons | filter:searchText | orderBy: orderParam">
+                <td  ng-bind="person.name | newFilter"></td>
+                <td ng-bind="person.surname | newFilter"></td>
+                <td ng-bind="person.age"></td>
+                <td ng-bind="person.language | newFilter"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

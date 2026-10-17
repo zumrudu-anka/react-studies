@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ToDoApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <link rel="stylesheet" href="Styles/style.css">
+    <title>Document</title>
+</head>
+<body ng-controller="BodyController">
+    <header class="Header" ng-controller="headerController">
+        <button ng-click="AddItem()" class="AddButton">Ekle</button>
+        <select ng-model="data.selectfilter" class="FilterSelect">
+                <option value="">Tümü</option>
+                <option value="Yapılmadı">Yapılacak</option>
+                <option value="Yapıldı">Yapıldı</option>
+            </select>
+        <input ng-model="data.searchedtext" class="SearchInput" type="text" placeholder="Yapılacak iş adıyla arayın...">
+    </header>
+    <section ng-controller="TableController">
+        <div class="ToDoList">
+            <table id="ToDoListTable">
+                <tr>
+                    <th>Konu</th>
+                    <th>Zaman</th>
+                    <th>Durum</th>
+                </tr>
+                <tr ng-repeat="item in yapilacaklar | filter: data.searchedtext | filter: data.selectfilter | orderBy:'time'">
+                    <td ng-class="item.isHappen == 'Yapıldı' ? 'HappenedItem' : '' ">{{item.title}}</td>
+                    <td ng-class="item.isHappen == 'Yapıldı' ? 'HappenedItem' : '' ">{{item.time}}</td>
+                    <td ng-class="item.isHappen == 'Yapıldı' ? 'HappenedItem' : '' ">
+                        <input ng-click="changeItemState(item.id)" type="checkbox" ng-if="item.isHappen == 'Yapılmadı'">
+                        {{item.isHappen}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section ng-controller="Party">
+        <div class="ToDoList">
+            <table id="ToDoListTable">
+                <tr>
+                    <th>No</th>
+                    <th>Adı</th>
+                    <th>E-Mail</th>
+                    <th>Katılma Durumu</th>
+                </tr>
+                <tr ng-repeat="user in katilimcilar">
+                    <td ng-class="!user.KatilmaDurumu ? 'HappenedItem' : '' ">{{$index + 1}}</td>
+                    <td ng-class="!user.KatilmaDurumu ? 'HappenedItem' : '' ">{{user.Ad}}</td>
+                    <td ng-class="!user.KatilmaDurumu ? 'HappenedItem' : '' ">{{user.Eposta}}</td>
+                    <td ng-class="!user.KatilmaDurumu ? 'HappenedItem' : '' ">
+                        <input type="checkbox" ng-click="changeKatilma(user.Ad)" ng-checked="user.KatilmaDurumu">
+                        {{user.KatilmaDurumu ? "Katılıyor" : "Katılmıyor"}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <!-- <section ng-controller="UserController">
+        <ul>
+            <li ng-repeat="user in users">
+                <span ng-bind="user.Ad"></span>------<span ng-bind="user.Eposta"></span>-------<span ng-bind="user.KatilmaDurumu"></span><button ng-click="DeleteUser(user)">Sil</button>
+            </li>
+        </ul>
+        <br><br>
+        <button ng-click="AddUser()">Yeni Ekle</button>
+    </section>  -->
+    <script src="Scripts/script.js"></script>
+</body>
+</html>

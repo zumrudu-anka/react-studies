@@ -1,0 +1,95 @@
+.AddButton{
+    width: 10%;
+    padding:10px;
+    background-color: darkslategrey;
+    color:#d0a715;
+    font-weight: bold;
+    font-size:15px;
+    border:2px solid #d0a715; 
+    border-radius: 15px;
+}
+
+.SearchInput{
+    width: 20%;
+    padding:10px;
+    margin-left:5%;
+    border:2px solid #d0a715;
+    border-radius:15px;
+    color:darkslategrey;
+    text-decoration-color: darkslategrey;
+    caret-color: #d0a715;
+}
+.SearchInput::placeholder{
+    text-align: center;
+    font-weight: bold;
+    color:darkslategrey;
+}
+
+.FilterSelect{
+    width: 15%;
+    padding:10px;
+    margin-left:5%;
+    border:2px solid #d0a715;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align-last: center;
+    text-align: center;
+    color:darkslategrey;
+}
+
+.FilterSelect option{
+    font-weight: bold;
+    color:darkslategrey;
+    position: absolute;
+    text-indent: 15%;
+    border: 1px solid transparent;
+    border-color: transparent transparent blue transparent;
+    background-color: #d0a715;
+}   
+
+.Header{
+    width:90%;
+    margin:3% 5% 5% 5%;
+    text-align: center;
+}
+
+.ToDoList{
+    width:90%;
+    margin:3% 5% 5% 5%;
+    text-align: center;
+}
+
+#ToDoListTable {
+    width:100%;
+    border:2px solid #d0a715;
+    border-radius: 15px;
+}
+
+#ToDoListTable caption{
+    font-size:25px;
+    font-weight: bold;
+    color: darkslategrey;
+}
+
+#ToDoListTable th{
+    background-color: darkslategrey;
+    padding: 10px;
+    font-weight: bold;
+    font-size:20px;
+    border:5px solid #d0a715;
+    border-radius: 12px;
+}
+
+#ToDoListTable td{
+    background-color: #0a2323;
+    padding: 10px;
+    color: #d0a715;
+    font-weight: bold;
+    font-size:15px;
+    border:5px solid #d0a715;
+    border-radius: 12px;
+}
+
+.HappenedItem{
+    color:red !important;
+}
